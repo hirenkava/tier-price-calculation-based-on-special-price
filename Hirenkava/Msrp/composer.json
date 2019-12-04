@@ -10,6 +10,12 @@
         "OSL-3.0",
         "AFL-3.0"
     ],
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/hirenkava/tier-price-calculation-based-on-special-price"
+        }
+    ],
     "autoload": {
         "files": [
             "registration.php"
