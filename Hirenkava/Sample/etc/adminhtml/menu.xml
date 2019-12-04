@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
-	<menu>
-		<add id="Hirenkava::top_level" module="Hirenkava_Sample" resource="Magento_Backend::content" sortOrder="9999" title="Hirenkava"/>
-		<add action="hirenkava_sample/index/index" id="Hirenkava_Sample::index_index" module="Hirenkava_Sample" parent="Hirenkava::top_level" resource="Hirenkava_Sample::index_index" sortOrder="9999" title="index index"/>
-		<add action="hirenkava_sample/sample/index" id="Hirenkava_Sample::hirenkava_sample_sample" module="Hirenkava_Sample" parent="Hirenkava::top_level" resource="Magento_Backend::content" sortOrder="9999" title="Sample"/>
-	</menu>
-</config>
