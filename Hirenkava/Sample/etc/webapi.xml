@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route method="POST" url="/V1/hirenkava-sample/sample">
+		<service class="Hirenkava\Sample\Api\SampleRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Hirenkava_Sample::Sample_save"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/hirenkava-sample/sample/search">
+		<service class="Hirenkava\Sample\Api\SampleRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Hirenkava_Sample::Sample_view"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/hirenkava-sample/sample/:sampleId">
+		<service class="Hirenkava\Sample\Api\SampleRepositoryInterface" method="getById"/>
+		<resources>
+			<resource ref="Hirenkava_Sample::Sample_view"/>
+		</resources>
+	</route>
+	<route method="PUT" url="/V1/hirenkava-sample/sample/:sampleId">
+		<service class="Hirenkava\Sample\Api\SampleRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Hirenkava_Sample::Sample_update"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/hirenkava-sample/sample/:sampleId">
+		<service class="Hirenkava\Sample\Api\SampleRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Hirenkava_Sample::Sample_delete"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/hirenkava-sample/getlist">
+		<service class="Hirenkava\Sample\Api\GetListManagementInterface" method="getGetList"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route method="POST" url="/V1/hirenkava-sample/save">
+		<service class="Hirenkava\Sample\Api\SaveManagementInterface" method="postSave"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/hirenkava-sample/delete">
+		<service class="Hirenkava\Sample\Api\DeleteManagementInterface" method="deleteDelete"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/hirenkava-sample/get">
+		<service class="Hirenkava\Sample\Api\GetManagementInterface" method="getGet"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+</routes>

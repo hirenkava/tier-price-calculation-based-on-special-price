@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Hirenkava_Sample::hirenkava_sample" sortOrder="10" title="hirenkava sample">
+					<resource id="Hirenkava_Sample::index_index" sortOrder="10" title="index index"/>
+				</resource>
+				<resource id="Hirenkava_Sample::Sample" sortOrder="10" title="Sample">
+					<resource id="Hirenkava_Sample::Sample_save" sortOrder="10" title="Save Sample"/>
+					<resource id="Hirenkava_Sample::Sample_delete" sortOrder="20" title="Delete Sample"/>
+					<resource id="Hirenkava_Sample::Sample_update" sortOrder="30" title="Update Sample"/>
+					<resource id="Hirenkava_Sample::Sample_view" sortOrder="40" title="View Sample"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Hirenkava\Sample\Api\SampleRepositoryInterface" type="Hirenkava\Sample\Model\SampleRepository"/>
+	<preference for="Hirenkava\Sample\Api\Data\SampleInterface" type="Hirenkava\Sample\Model\Data\Sample"/>
+	<preference for="Hirenkava\Sample\Api\Data\SampleSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Hirenkava\Sample\Model\ResourceModel\Sample\Grid\Collection" type="Hirenkava\Sample\Ui\Component\DataProvider\SearchResult\Items">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">hirenkava_sample_sample</argument>
+			<argument name="resourceModel" xsi:type="string">Hirenkava\Sample\Model\ResourceModel\Sample\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="hirenkava_sample_sample_listing_data_source" xsi:type="string">Hirenkava\Sample\Model\ResourceModel\Sample\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+	<preference for="Hirenkava\Sample\Api\GetListManagementInterface" type="Hirenkava\Sample\Model\GetListManagement"/>
+	<preference for="Hirenkava\Sample\Api\SaveManagementInterface" type="Hirenkava\Sample\Model\SaveManagement"/>
+	<preference for="Hirenkava\Sample\Api\DeleteManagementInterface" type="Hirenkava\Sample\Model\DeleteManagement"/>
+	<preference for="Hirenkava\Sample\Api\GetManagementInterface" type="Hirenkava\Sample\Model\GetManagement"/>
+</config>
